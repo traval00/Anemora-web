@@ -1,0 +1,69 @@
+/* Reset + background */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(to bottom right, #0f0f1c, #1b1c2f);
+  height: 100vh;
+  font-family: 'Georgia', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: #f1e9fc;
+  position: relative;
+}
+
+/* Stars animation */
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/img/stars.png') repeat top center;
+  animation: drift 60s linear infinite;
+  opacity: 0.2;
+}
+
+@keyframes drift {
+  0% {background-position: 0 0;}
+  100% {background-position: 1000px 1000px;}
+}
+
+/* Container */
+.container {
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+  background: rgba(15, 15, 30, 0.6);
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+}
+
+/* Title + Haiku */
+.title {
+  font-size: 3rem;
+  color: #e0c3fc;
+  margin-bottom: 20px;
+}
+.haiku {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #bfa9ff;
+}
+
+/* Buttons */
+.buttons .btn {
+  background: #4b2997;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  margin: 0 10px;
+  transition: background 0.3s ease;
+}
+.buttons .btn:hover {
+  background: #6c3fe0;
+}
